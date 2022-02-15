@@ -5,7 +5,7 @@ from PyQt5.QtWidgets import QMainWindow, QApplication
 from PyQt5.QtWidgets import QMessageBox 
 import math
 
-class Example(QMainWindow):
+class n_primos(QMainWindow):
     
     divisores_del_rango=2
     
@@ -44,6 +44,6 @@ class Example(QMainWindow):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    ex = Example()
+    ex = n_primos()
     ex.show()
     sys.exit(app.exec_())

@@ -5,7 +5,7 @@ from PyQt5.QtWidgets import QMainWindow, QApplication
 from PyQt5.QtWidgets import QMessageBox 
 import math
 
-class Example(QMainWindow):
+class numerofibo(QMainWindow):
     
 
     
@@ -25,8 +25,10 @@ class Example(QMainWindow):
         numero_2=1
         numero_3=0
         mostrar=[]
-        print("1")
-        print("1")
+        
+        if (numeroInicial>numeroFinal):
+            return (" que no indicaste un rango valido")
+
         while(n_base<=numeroFinal):  # este bucle es que el hace la suma del numero de fibonachi 
             numero_3=numero_1+numero_2
             numero_1=numero_2
@@ -34,10 +36,12 @@ class Example(QMainWindow):
             if (numero_3 >= numeroInicial and numero_3<=numeroFinal): # esta condicion lo que hace es que  determinar en el rango cuales numeros 
                 mostrar.append(numero_3)# seran los que apareceran en mostrar al usuario 
             n_base=n_base+1
+        if (len(mostrar)==0):
+            return (" ninguno porque no hay numeros de fibo en este rango")
         return(mostrar)
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    ex = Example()
+    ex = numerofibo()
     ex.show()
     sys.exit(app.exec_())
